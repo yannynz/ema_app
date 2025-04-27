@@ -1,0 +1,7 @@
+{
+  "eventId": "1",
+  "ownerUid": "user_01",
+  "startedAt": "2025-04-27T17:30:00Z",
+  "status": "open",
+  "contactIds": ["c1","c2"]
+}

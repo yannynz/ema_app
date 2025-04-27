@@ -1,0 +1,27 @@
+[
+  {
+    "tipId": "tip1",
+    "title": "Mantenha-se em áreas bem iluminadas",
+    "body": "Prefira rotas com iluminação pública adequada e evite ruas escuras e desertas."
+  },
+  {
+    "tipId": "tip2",
+    "title": "Esteja atenta ao redor",
+    "body": "Evite usar fones de ouvido em volume alto e mantenha contato visual com quem estiver por perto."
+  },
+  {
+    "tipId": "tip3",
+    "title": "Informe alguém de confiança",
+    "body": "Compartilhe seu trajeto em tempo real com um contato de confiança antes de sair."
+  },
+  {
+    "tipId": "tip4",
+    "title": "Tenha um objeto de defesa",
+    "body": "Mantenha à mão spray de pimenta ou outro dispositivo permitido e aprenda a usá-lo."
+  },
+  {
+    "tipId": "tip5",
+    "title": "Varie seus horários e trajetos",
+    "body": "Evite rotina previsível para reduzir riscos; mude rotas e horários quando possível."
+  }
+]
