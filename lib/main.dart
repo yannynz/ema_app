@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme.dart';
 import 'core/constants.dart';
-import 'features/sos/presentation/sos_screen.dart';
-import 'features/navigation/home_screen.dart';  
+import 'features/auth/presentation/login_screen.dart';
+import 'features/auth/presentation/register_screen.dart';
+import 'features/navigation/home_screen.dart';
 
 void main() {
   runApp(const ProviderScope(child: EmaApp()));
@@ -17,7 +18,12 @@ class EmaApp extends StatelessWidget {
     return MaterialApp(
       title: appTitle,
       theme: appTheme,
-      home: const HomeScreen(),
+      initialRoute: '/login',
+      routes: {
+        '/login': (c) => const LoginScreen(),
+        '/register': (c) => const RegisterScreen(),
+        '/home': (c) => const HomeScreen(),
+      },
     );
   }
 }

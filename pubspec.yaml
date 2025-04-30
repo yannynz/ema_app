@@ -16,6 +16,8 @@ dependencies:
   google_maps_flutter: ^2.0.0
   google_maps_flutter_web: ^0.3.0
   flutter_animate: ^4.0.0
+  url_launcher: ^6.1.5
+  path_provider: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -29,3 +31,4 @@ flutter:
     - assets/json/location_stream.json
     - assets/json/contacts.json
     - assets/json/safety_tips.json
+    - assets/json/users.json

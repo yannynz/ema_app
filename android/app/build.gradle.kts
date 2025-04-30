@@ -7,6 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.ema_app"
+    ndkVersion = "27.0.12077973"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -38,6 +39,15 @@ android {
         }
     }
 }
+dependencies {
+    // já deve ter suas implementações normais, por ex:
+    implementation("androidx.core:core-ktx:1.10.1")
+    // ...
+
+    // ← esta linha é obrigatória para desugaring
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
+}
+
 
 flutter {
     source = "../.."
