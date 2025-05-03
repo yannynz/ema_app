@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants.dart';
-import '../../sos/data/sos_repository.dart';
-import '../../sos/data/models/sos_event.dart';
+import '../data/sos_repository.dart';
+import '../data/models/sos_event.dart';
 
-final sosEventProvider = FutureProvider.autoDispose<SosEvent>((ref) {
-  final repo = SosRepository();
-  return repo.fetchLatestEvent();
-});
+final sosEventProvider = FutureProvider.autoDispose<SosEvent>((ref) => SosRepository().fetchLatestEvent());
 
 class SosScreen extends ConsumerWidget {
   const SosScreen({Key? key}) : super(key: key);
@@ -19,18 +16,10 @@ class SosScreen extends ConsumerWidget {
       appBar: AppBar(title: const Text(appTitle)),
       body: Center(
         child: asyncEvent.when(
-          data: (event) => ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Theme.of(context).colorScheme.primary,
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16)),
-            ),
-            onPressed: () {
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(const SnackBar(content: Text('SOS disparado!')));
-            },
-            child: const Text('Botão SOS'),
+          data: (_) => ElevatedButton(
+            onPressed: () => ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('SOS disparado!'))),
+            style: ElevatedButton.styleFrom(shape: const CircleBorder(), padding: const EdgeInsets.all(128), backgroundColor: Theme.of(context).colorScheme.primary),
+            child: const Text('S.O.S', style: TextStyle(color: Colors.white, fontSize: 48, fontWeight: FontWeight.bold)),
           ),
           loading: () => const CircularProgressIndicator(),
           error: (e, _) => Text('Erro: \$e'),

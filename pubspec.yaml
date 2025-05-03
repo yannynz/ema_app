@@ -32,3 +32,4 @@ flutter:
     - assets/json/contacts.json
     - assets/json/safety_tips.json
     - assets/json/users.json
+    - assets/images/ema_logo.png

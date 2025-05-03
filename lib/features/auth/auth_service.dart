@@ -9,13 +9,11 @@ class AuthService {
   }
 
   static bool login(String email, String password) {
-    final user = _users.firstWhere(
-      (u) => u.email == email && u.password == password,
-      orElse: () => null,
-    );
-    if (user != null) {
-      _current = user;
-      return true;
+    for (final user in _users) {
+      if (user.email == email && user.password == password) {
+        _current = user;
+        return true;
+      }
     }
     return false;
   }

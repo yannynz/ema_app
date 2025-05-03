@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme.dart';
 import 'core/constants.dart';
-import 'features/auth/presentation/login_screen.dart';
-import 'features/auth/presentation/register_screen.dart';
+import 'features/auth/login_screen.dart';
 import 'features/navigation/home_screen.dart';
 
 void main() {
@@ -16,13 +15,13 @@ class EmaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+    debugShowCheckedModeBanner: false,
       title: appTitle,
       theme: appTheme,
       initialRoute: '/login',
       routes: {
-        '/login': (c) => const LoginScreen(),
-        '/register': (c) => const RegisterScreen(),
-        '/home': (c) => const HomeScreen(),
+        '/login': (_) => const LoginScreen(),
+        '/home': (_) => const HomeScreen(),
       },
     );
   }
