@@ -5,6 +5,7 @@ import '../location/presentation/location_screen.dart';
 import '../contacts/presentation/contacts_screen.dart';
 import '../tips/presentation/tips_screen.dart';
 import '../../core/constants.dart';
+import '../chat/presentation/chat_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     LocationScreen(),
     ContactsScreen(),
     TipsScreen(),
+    ChatScreen(),  
   ];
 
   void _onTap(int idx) => setState(() => _currentIndex = idx);
@@ -28,9 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const AppDrawer(),
-      appBar: AppBar(
-        title: Text(appTitle),
-      ),
+      appBar: AppBar(title: Text(appTitle)),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -42,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.location_on), label: 'Localização'),
           BottomNavigationBarItem(icon: Icon(Icons.contacts), label: 'Contatos'),
           BottomNavigationBarItem(icon: Icon(Icons.lightbulb), label: 'Dicas'),
+          BottomNavigationBarItem(icon: Icon(Icons.chat_bubble_outline), label: 'Chat'),
         ],
       ),
     );
