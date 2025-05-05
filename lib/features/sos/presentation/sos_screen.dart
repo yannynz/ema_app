@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../core/constants.dart';
 import '../data/sos_repository.dart';
 import '../data/models/sos_event.dart';
 
@@ -13,7 +12,7 @@ class SosScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final asyncEvent = ref.watch(sosEventProvider);
     return Scaffold(
-      appBar: AppBar(title: const Text(appTitle)),
+      appBar: AppBar(title: const Text('S.O.S')),
       body: Center(
         child: asyncEvent.when(
           data: (_) => ElevatedButton(
