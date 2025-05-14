@@ -10,10 +10,11 @@ class AboutScreen extends StatelessWidget {
       body: const Padding(
         padding: EdgeInsets.all(16.0),
         child: Text(
-          'E.M.A é um aplicativo dedicado à segurança feminina...'
-          '\n\nMissão: Reduzir o tempo entre o alerta e a ajuda.'
-          '\nVisão: Oferecer um canal discreto e confiável.'
-          '\nValores: Privacidade, Confiabilidade, Empoderamento.',
+          'Visão'
+          '\nSer referência nacional em soluções tecnológicas voltadas à segurança pessoal feminina, contribuindo para um cotidiano mais tranquilo e confiável.'
+          '\n '
+          '\nMissão'
+          '\nOferecer um aplicativo simples, eficaz e acessível que auxilie mulheres em situações de risco, conectando recursos inteligentes com suporte rápido e confiável.',
           style: TextStyle(fontSize: 16),
         ),
       ),

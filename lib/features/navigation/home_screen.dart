@@ -17,9 +17,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   static const List<Widget> _screens = <Widget>[
+    ContactsScreen(),
     SosScreen(),
     LocationScreen(),
-    ContactsScreen(),
     TipsScreen(),
     ChatScreen(),  
   ];
@@ -38,9 +38,9 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedItemColor: Theme.of(context).colorScheme.primary,
         unselectedItemColor: Colors.grey,
         items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.contacts), label: 'Contatos'),
           BottomNavigationBarItem(icon: Icon(Icons.warning), label: 'SOS'),
           BottomNavigationBarItem(icon: Icon(Icons.location_on), label: 'Localização'),
-          BottomNavigationBarItem(icon: Icon(Icons.contacts), label: 'Contatos'),
           BottomNavigationBarItem(icon: Icon(Icons.lightbulb), label: 'Dicas'),
           BottomNavigationBarItem(icon: Icon(Icons.chat_bubble_outline), label: 'Chat'),
         ],
