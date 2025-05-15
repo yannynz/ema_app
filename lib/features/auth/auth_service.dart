@@ -17,13 +17,25 @@ class AuthService {
     }
     return false;
   }
+        static _User? get currentUser => _current;
 
   static String? get currentUserName => _current?.name;
 }
 
 class _User {
-  final String name;
-  final String email;
-  final String password;
-  _User(this.name, this.email, this.password);
+  String _name;
+  String _email;
+  String _password;
+
+  _User(this._name, this._email, this._password);
+
+  String get name => _name;
+  set name(String value) => _name = value;
+
+  String get email => _email;
+  set email(String value) => _email = value;
+
+  String get password => _password;
+  set password(String value) => _password = value;
 }
+
