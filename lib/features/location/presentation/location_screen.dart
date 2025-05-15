@@ -10,44 +10,59 @@ class LocationScreen extends StatelessWidget {
         title: const Text('Localização'),
       ),
       body: Center(
-        child: ElevatedButton.icon(
-          onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text(
-                  'Localização enviada com sucesso aos favoritos',
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                Icons.map,
+                size: 120,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              const SizedBox(height: 32),
+              ElevatedButton.icon(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text(
+                        'Localização enviada com sucesso aos favoritos',
+                      ),
+                    ),
+                  );
+                },
+                icon: const Icon(
+                  Icons.send,
+                  size: 28,
+                  color: Colors.white,
+                ),
+                label: const Text(
+                  'Enviar Localização',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  elevation: 6,
+                  shadowColor: Colors.black45,
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 16,
+                    horizontal: 32,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(24),
+                  ),
                 ),
               ),
-            );
-          },
-          icon: const Icon(
-            Icons.send,
-            size: 28,
-            color: Colors.white,
-          ),
-          label: const Text(
-            'Enviar Localização',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              color: Colors.white,
-            ),
-          ),
-          style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white,
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            elevation: 6,
-            shadowColor: Colors.black45,
-            padding: const EdgeInsets.symmetric(
-              vertical: 16,
-              horizontal: 32,
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(24),
-            ),
+            ],
           ),
         ),
       ),
     );
   }
 }
+
